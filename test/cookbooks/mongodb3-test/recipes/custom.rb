@@ -17,7 +17,7 @@
 # limitations under the License.
 #
 
-node.set['mongodb3']['config']['mongod']['storage']['dbPath'] = '/var/lib/mongodb/custom'
-node.set['mongodb3']['config']['mongod']['systemLog']['path'] = '/var/log/mongodb/custom/mongod.log'
+node.default['mongodb3']['config']['mongod']['storage']['dbPath'] = '/var/lib/mongodb/custom'
+node.default['mongodb3']['config']['mongod']['systemLog']['path'] = '/var/log/mongodb/custom/mongod.log'
 
 include_recipe 'mongodb3::default'

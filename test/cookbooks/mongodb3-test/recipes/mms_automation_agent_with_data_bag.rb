@@ -34,7 +34,7 @@
 mms_data_bag_item = Chef::EncryptedDataBagItem.load('mongodb', 'mms-agent')
 mms_data_bag = mms_data_bag_item['environments'][node.chef_environment]
 
-node.set['mongodb3']['config']['mms']['mmsGroupId'] = mms_data_bag['mms_group_id']
-node.set['mongodb3']['config']['mms']['mmsApiKey'] = mms_data_bag['mms_api_key']
+node.default['mongodb3']['config']['mms']['mmsGroupId'] = mms_data_bag['mms_group_id']
+node.default['mongodb3']['config']['mms']['mmsApiKey'] = mms_data_bag['mms_api_key']
 
 include_recipe 'mongodb3::mms_automation_agent'

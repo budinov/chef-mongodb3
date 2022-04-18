@@ -72,7 +72,7 @@ if node['platform'] == 'oracle'
     action :create
   end
   # Set `['runit']['prefer_local_yum'] = true` to avoid install yum repository through packagecloud cookbook
-  node.set['runit']['prefer_local_yum'] = true
+  node.default['runit']['prefer_local_yum'] = true
 end
 
 # Install runit service package through runit::default recipe
